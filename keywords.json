@@ -1,0 +1,551 @@
+{
+    "Handwerk": {
+        "Trockenbauer": {
+            "keywords": ["Trockenbauer"],
+            "related": ["Stuckateur", "Maurer"]
+        },
+        "Maler": {
+            "keywords": ["Maler"],
+            "related": ["Stuckateur", "Bodenleger"]
+        },
+        "Elektriker": {
+            "keywords": ["Elektriker"],
+            "related": ["Heizungsbauer", "Sanitär"]
+        },
+        "Klempner": {
+            "keywords": ["Klempner"],
+            "related": ["Sanitär", "Heizungsbauer"]
+        },
+        "Dachdecker": {
+            "keywords": ["Dachdecker"],
+            "related": ["Zimmerer", "Isolierer"]
+        },
+        "Schreiner": {
+            "keywords": ["Schreiner"],
+            "related": ["Zimmerer", "Bodenleger"]
+        },
+        "Fliesenleger": {
+            "keywords": ["Fliesenleger"],
+            "related": ["Bodenleger", "Maurer"]
+        },
+        "Sanitär": {
+            "keywords": ["Sanitärbetrieb"],
+            "related": ["Heizungsbauer", "Klempner"]
+        },
+        "Heizungsbauer": {
+            "keywords": ["Heizungsbauer"],
+            "related": ["Sanitär", "Elektriker"]
+        },
+        "Gerüstbauer": {
+            "keywords": ["Gerüstbauer"],
+            "related": ["Dachdecker", "Maurer"]
+        },
+        "Bodenleger": {
+            "keywords": ["Bodenleger"],
+            "related": ["Fliesenleger", "Schreiner"]
+        },
+        "Glaser": {
+            "keywords": ["Glaser"],
+            "related": ["Schreiner", "Metallbauer"]
+        },
+        "Zimmerer": {
+            "keywords": ["Zimmerer"],
+            "related": ["Dachdecker", "Schreiner"]
+        },
+        "Schweißer": {
+            "keywords": ["Schweißer"],
+            "related": ["Metallbauer", "Schlosser"]
+        },
+        "Maurer": {
+            "keywords": ["Maurer"],
+            "related": ["Trockenbauer", "Stuckateur"]
+        },
+        "Metallbauer": {
+            "keywords": ["Metallbauer"],
+            "related": ["Schweißer", "Glaser"]
+        },
+        "Isolierer": {
+            "keywords": ["Wärmedämmung"],
+            "related": ["Dachdecker", "Maurer"]
+        },
+        "Ofenbauer": {
+            "keywords": ["Ofenbauer"],
+            "related": ["Heizungsbauer", "Maurer"]
+        },
+        "Rollladenbauer": {
+            "keywords": ["Rollladenbauer"],
+            "related": ["Glaser", "Schreiner"]
+        },
+        "Stuckateur": {
+            "keywords": ["Stuckateur"],
+            "related": ["Maurer", "Trockenbauer"]
+        }
+    },
+
+    "Bau": {
+        "Bauunternehmen": {
+            "keywords": ["Bauunternehmen"],
+            "related": ["Architekt", "Statiker"]
+        },
+        "Architekt": {
+            "keywords": ["Architekt"],
+            "related": ["Statiker", "Bauunternehmen"]
+        },
+        "Statiker": {
+            "keywords": ["Statiker"],
+            "related": ["Architekt", "Bauunternehmen"]
+        },
+        "Tiefbau": {
+            "keywords": ["Tiefbauunternehmen"],
+            "related": ["Bauunternehmen", "Gartenbau"]
+        },
+        "Abrissunternehmen": {
+            "keywords": ["Abbruchunternehmen"],
+            "related": ["Bauunternehmen", "Tiefbau"]
+        },
+        "Gartenbau": {
+            "keywords": ["Gartenbau"],
+            "related": ["Tiefbau", "Abrissunternehmen"]
+        }
+    },
+
+    "Medizin": {
+        "Hausarzt": {
+            "keywords": ["Hausarzt"],
+            "related": ["Orthopäde", "Heilpraktiker"]
+        },
+        "Zahnarzt": {
+            "keywords": ["Zahnarzt"],
+            "related": ["Kieferorthopäde", "Zahntechniker"]
+        },
+        "Kieferorthopäde": {
+            "keywords": ["Kieferorthopäde"],
+            "related": ["Zahnarzt", "Oralchirurg"]
+        },
+        "Augenarzt": {
+            "keywords": ["Augenarzt"],
+            "related": ["Optiker", "Heilpraktiker"]
+        },
+        "Hautarzt": {
+            "keywords": ["Hautarzt"],
+            "related": ["Heilpraktiker", "Hausarzt"]
+        },
+        "Orthopäde": {
+            "keywords": ["Orthopäde"],
+            "related": ["Physiotherapeut", "Hausarzt"]
+        },
+        "Physiotherapeut": {
+            "keywords": ["Physiotherapeut"],
+            "related": ["Orthopäde", "Massagestudio"]
+        },
+        "Psychotherapeut": {
+            "keywords": ["Psychotherapeut"],
+            "related": ["Heilpraktiker", "Hausarzt"]
+        },
+        "Apotheke": {
+            "keywords": ["Apotheke"],
+            "related": ["Hausarzt", "Heilpraktiker"]
+        },
+        "Optiker": {
+            "keywords": ["Optiker"],
+            "related": ["Augenarzt", "Hörgeräte"]
+        },
+        "Hörgeräte": {
+            "keywords": ["Hörgeräteakustiker"],
+            "related": ["Optiker", "Hausarzt"]
+        },
+        "Heilpraktiker": {
+            "keywords": ["Heilpraktiker"],
+            "related": ["Physiotherapeut", "Massagestudio"]
+        }
+    },
+
+    "Tiermedizin": {
+        "Tierarzt": {
+            "keywords": ["Tierarzt"],
+            "related": ["Tierheilpraktiker", "Tierhotel"]
+        },
+        "Tierheilpraktiker": {
+            "keywords": ["Tierheilpraktiker"],
+            "related": ["Tierarzt", "Hundesalon"]
+        },
+        "Hundesalon": {
+            "keywords": ["Hundesalon"],
+            "related": ["Tierhotel", "Tierarzt"]
+        },
+        "Tierheim": {
+            "keywords": ["Tierheim"],
+            "related": ["Tierarzt", "Tierhotel"]
+        },
+        "Tierhotel": {
+            "keywords": ["Tierhotel"],
+            "related": ["Hundesalon", "Tierarzt"]
+        }
+    },
+
+    "Schönheit und Wellness": {
+        "Friseur": {
+            "keywords": ["Friseur"],
+            "related": ["Barbershop", "Kosmetikstudio"]
+        },
+        "Barbershop": {
+            "keywords": ["Barbershop"],
+            "related": ["Friseur", "Kosmetikstudio"]
+        },
+        "Kosmetikstudio": {
+            "keywords": ["Kosmetikstudio"],
+            "related": ["Nagelstudio", "Spa"]
+        },
+        "Nagelstudio": {
+            "keywords": ["Nagelstudio"],
+            "related": ["Kosmetikstudio", "Wimpernstudio"]
+        },
+        "Tattoo": {
+            "keywords": ["Tattoostudio"],
+            "related": ["Barbershop", "Kosmetikstudio"]
+        },
+        "Massagestudio": {
+            "keywords": ["Massagestudio"],
+            "related": ["Spa", "Physiotherapeut"]
+        },
+        "Spa": {
+            "keywords": ["Spa"],
+            "related": ["Massagestudio", "Kosmetikstudio"]
+        },
+        "Sonnenstudio": {
+            "keywords": ["Sonnenstudio"],
+            "related": ["Kosmetikstudio", "Spa"]
+        },
+        "Wimpernstudio": {
+            "keywords": ["Wimpernstudio"],
+            "related": ["Nagelstudio", "Kosmetikstudio"]
+        }
+    },
+
+    "Gastronomie": {
+        "Restaurant": {
+            "keywords": ["Restaurant"],
+            "related": ["Catering", "Café"]
+        },
+        "Café": {
+            "keywords": ["Café"],
+            "related": ["Bäckerei", "Restaurant"]
+        },
+        "Bäckerei": {
+            "keywords": ["Bäckerei"],
+            "related": ["Café", "Metzgerei"]
+        },
+        "Metzgerei": {
+            "keywords": ["Metzgerei"],
+            "related": ["Bäckerei", "Catering"]
+        },
+        "Imbiss": {
+            "keywords": ["Imbiss"],
+            "related": ["Restaurant", "Pizzeria"]
+        },
+        "Pizzeria": {
+            "keywords": ["Pizzeria"],
+            "related": ["Restaurant", "Imbiss"]
+        },
+        "Catering": {
+            "keywords": ["Cateringservice"],
+            "related": ["Restaurant", "Eventplaner"]
+        },
+        "Bar": {
+            "keywords": ["Bar"],
+            "related": ["Restaurant", "Café"]
+        }
+    },
+
+    "Einzelhandel": {
+        "Supermarkt": {
+            "keywords": ["Supermarkt"],
+            "related": ["Bäckerei", "Metzgerei"]
+        },
+        "Blumengeschäft": {
+            "keywords": ["Blumengeschäft"],
+            "related": ["Gartenbau", "Eventplaner"]
+        },
+        "Buchhandlung": {
+            "keywords": ["Buchhandlung"],
+            "related": ["Nachhilfe", "Musikschule"]
+        },
+        "Sportgeschäft": {
+            "keywords": ["Sportgeschäft"],
+            "related": ["Fitnessstudio", "Yogastudio"]
+        },
+        "Modegeschäft": {
+            "keywords": ["Modegeschäft"],
+            "related": ["Kosmetikstudio", "Schuhgeschäft"]
+        },
+        "Elektrohandel": {
+            "keywords": ["Elektrohandel"],
+            "related": ["IT Support", "Elektriker"]
+        },
+        "Möbelgeschäft": {
+            "keywords": ["Möbelgeschäft"],
+            "related": ["Schreiner", "Innenarchitekt"]
+        },
+        "Baumarkt": {
+            "keywords": ["Baumarkt"],
+            "related": ["Bauunternehmen", "Elektriker"]
+        }
+    },
+
+    "Automotive": {
+        "Autowerkstatt": {
+            "keywords": ["Autowerkstatt"],
+            "related": ["Reifenhandel", "Lackiererei"]
+        },
+        "Reifenhandel": {
+            "keywords": ["Reifenhandel"],
+            "related": ["Autowerkstatt", "Autopflege"]
+        },
+        "Autohandel": {
+            "keywords": ["Autohandel"],
+            "related": ["Autowerkstatt", "Lackiererei"]
+        },
+        "Lackiererei": {
+            "keywords": ["Autolackiererei"],
+            "related": ["Autowerkstatt", "Autohandel"]
+        },
+        "Fahrschule": {
+            "keywords": ["Fahrschule"],
+            "related": ["Nachhilfe", "Sprachschule"]
+        },
+        "Tankstelle": {
+            "keywords": ["Tankstelle"],
+            "related": ["Autowerkstatt", "Autopflege"]
+        },
+        "Autopflege": {
+            "keywords": ["Autopflege"],
+            "related": ["Autowerkstatt", "Reifenhandel"]
+        }
+    },
+
+    "Dienstleistung": {
+        "Reinigung": {
+            "keywords": ["Gebäudereinigung"],
+            "related": ["Entrümpelung", "Wäscherei"]
+        },
+        "Umzugsunternehmen": {
+            "keywords": ["Umzugsunternehmen"],
+            "related": ["Entrümpelung", "Reinigung"]
+        },
+        "Schlüsseldienst": {
+            "keywords": ["Schlüsseldienst"],
+            "related": ["Sicherheitsdienst", "Metallbauer"]
+        },
+        "Sicherheitsdienst": {
+            "keywords": ["Sicherheitsdienst"],
+            "related": ["Schlüsseldienst", "IT Support"]
+        },
+        "Schädlingsbekämpfung": {
+            "keywords": ["Schädlingsbekämpfung"],
+            "related": ["Reinigung", "Gebäudereinigung"]
+        },
+        "Entrümpelung": {
+            "keywords": ["Entrümpelung"],
+            "related": ["Umzugsunternehmen", "Reinigung"]
+        },
+        "Wäscherei": {
+            "keywords": ["Wäscherei"],
+            "related": ["Reinigung", "Entrümpelung"]
+        },
+        "Kurierdienst": {
+            "keywords": ["Kurierdienst"],
+            "related": ["Spedition", "Taxi"]
+        }
+    },
+
+    "Finanzen und Recht": {
+        "Steuerberater": {
+            "keywords": ["Steuerberater"],
+            "related": ["Buchhalter", "Unternehmensberater"]
+        },
+        "Rechtsanwalt": {
+            "keywords": ["Rechtsanwalt"],
+            "related": ["Notar", "Unternehmensberater"]
+        },
+        "Notar": {
+            "keywords": ["Notar"],
+            "related": ["Rechtsanwalt", "Immobilienmakler"]
+        },
+        "Versicherung": {
+            "keywords": ["Versicherungsmakler"],
+            "related": ["Steuerberater", "Unternehmensberater"]
+        },
+        "Buchhalter": {
+            "keywords": ["Buchhalter"],
+            "related": ["Steuerberater", "Unternehmensberater"]
+        },
+        "Unternehmensberater": {
+            "keywords": ["Unternehmensberater"],
+            "related": ["Steuerberater", "Rechtsanwalt"]
+        }
+    },
+
+    "Marketing und Medien": {
+        "Werbeagentur": {
+            "keywords": ["Werbeagentur"],
+            "related": ["Webdesign", "PR Agentur"]
+        },
+        "Webdesign": {
+            "keywords": ["Webdesign"],
+            "related": ["SEO Agentur", "Werbeagentur"]
+        },
+        "SEO Agentur": {
+            "keywords": ["SEO Agentur"],
+            "related": ["Webdesign", "Werbeagentur"]
+        },
+        "Fotograf": {
+            "keywords": ["Fotograf"],
+            "related": ["Videoproduktion", "Eventplaner"]
+        },
+        "Videoproduktion": {
+            "keywords": ["Videoproduktion"],
+            "related": ["Fotograf", "Werbeagentur"]
+        },
+        "Druckerei": {
+            "keywords": ["Druckerei"],
+            "related": ["Werbeagentur", "Webdesign"]
+        },
+        "PR Agentur": {
+            "keywords": ["PR Agentur"],
+            "related": ["Werbeagentur", "SEO Agentur"]
+        }
+    },
+
+    "Immobilien": {
+        "Immobilienmakler": {
+            "keywords": ["Immobilienmakler"],
+            "related": ["Hausverwaltung", "Notar"]
+        },
+        "Hausverwaltung": {
+            "keywords": ["Hausverwaltung"],
+            "related": ["Immobilienmakler", "Gutachter"]
+        },
+        "Gutachter": {
+            "keywords": ["Immobiliengutachter"],
+            "related": ["Hausverwaltung", "Architekt"]
+        }
+    },
+
+    "Bildung": {
+        "Nachhilfe": {
+            "keywords": ["Nachhilfe"],
+            "related": ["Sprachschule", "Musikschule"]
+        },
+        "Sprachschule": {
+            "keywords": ["Sprachschule"],
+            "related": ["Nachhilfe", "Musikschule"]
+        },
+        "Musikschule": {
+            "keywords": ["Musikschule"],
+            "related": ["Nachhilfe", "Tanzschule"]
+        },
+        "Kinderbetreuung": {
+            "keywords": ["Kinderbetreuung"],
+            "related": ["Nachhilfe", "Musikschule"]
+        }
+    },
+
+    "Sport und Freizeit": {
+        "Fitnessstudio": {
+            "keywords": ["Fitnessstudio"],
+            "related": ["Yogastudio", "Kampfsport"]
+        },
+        "Yogastudio": {
+            "keywords": ["Yogastudio"],
+            "related": ["Fitnessstudio", "Massagestudio"]
+        },
+        "Tanzschule": {
+            "keywords": ["Tanzschule"],
+            "related": ["Musikschule", "Yogastudio"]
+        },
+        "Kletterhalle": {
+            "keywords": ["Kletterhalle"],
+            "related": ["Fitnessstudio", "Kampfsport"]
+        },
+        "Kampfsport": {
+            "keywords": ["Kampfsportschule"],
+            "related": ["Fitnessstudio", "Tanzschule"]
+        }
+    },
+
+    "Unterkunft": {
+        "Hotel": {
+            "keywords": ["Hotel"],
+            "related": ["Pension", "Ferienwohnung"]
+        },
+        "Pension": {
+            "keywords": ["Pension"],
+            "related": ["Hotel", "Ferienwohnung"]
+        },
+        "Ferienwohnung": {
+            "keywords": ["Ferienwohnung"],
+            "related": ["Pension", "Hostel"]
+        },
+        "Hostel": {
+            "keywords": ["Hostel"],
+            "related": ["Pension", "Ferienwohnung"]
+        }
+    },
+
+    "Veranstaltung": {
+        "Eventplaner": {
+            "keywords": ["Eventplaner"],
+            "related": ["Hochzeitsplaner", "Catering"]
+        },
+        "Veranstaltungsraum": {
+            "keywords": ["Veranstaltungsraum"],
+            "related": ["Eventplaner", "Catering"]
+        },
+        "Hochzeitsplaner": {
+            "keywords": ["Hochzeitsplaner"],
+            "related": ["Eventplaner", "Fotograf"]
+        },
+        "DJ": {
+            "keywords": ["DJ"],
+            "related": ["Eventplaner", "Hochzeitsplaner"]
+        }
+    },
+
+    "IT und Technik": {
+        "IT Support": {
+            "keywords": ["IT Support"],
+            "related": ["Softwareentwicklung", "Netzwerktechnik"]
+        },
+        "Softwareentwicklung": {
+            "keywords": ["Softwareentwicklung"],
+            "related": ["Webdesign", "IT Support"]
+        },
+        "Netzwerktechnik": {
+            "keywords": ["Netzwerktechnik"],
+            "related": ["IT Support", "Telefonanlage"]
+        },
+        "Telefonanlage": {
+            "keywords": ["Telefonanlagen"],
+            "related": ["Netzwerktechnik", "IT Support"]
+        }
+    },
+
+    "Transport und Logistik": {
+        "Spedition": {
+            "keywords": ["Spedition"],
+            "related": ["Kurierdienst", "Umzugsunternehmen"]
+        },
+        "Taxi": {
+            "keywords": ["Taxiunternehmen"],
+            "related": ["Kurierdienst", "Fahrschule"]
+        },
+        "Kurierdienst": {
+            "keywords": ["Kurierdienst"],
+            "related": ["Spedition", "Taxi"]
+        },
+        "Fahrradverleih": {
+            "keywords": ["Fahrradverleih"],
+            "related": ["Taxi", "Sportgeschäft"]
+        }
+    }
+}

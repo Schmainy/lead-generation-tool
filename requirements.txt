@@ -1,0 +1,7 @@
+googlemaps
+requests
+pandas
+numpy
+pgeocode
+openpyxl
+reportlab

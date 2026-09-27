@@ -1,0 +1,21 @@
+{
+  "Berlin-Mitte": {
+    "city": "Mitte",
+    "radius_km": 0,
+    "plz_list": ["10115", "10117", "10119"],
+    "city_groups": {
+      "Mitte": ["10115", "10117", "10119"]
+    },
+    "date_saved": "2026-01-10"
+  },
+  "Musterstadt Umkreis": {
+    "city": "Musterstadt",
+    "radius_km": 10,
+    "plz_list": ["12345", "12347", "12349"],
+    "city_groups": {
+      "Musterstadt": ["12345", "12347"],
+      "Beispieldorf": ["12349"]
+    },
+    "date_saved": "2026-01-12"
+  }
+}

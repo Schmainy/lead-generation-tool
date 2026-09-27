@@ -1,0 +1,32 @@
+{
+  "EXAMPLE_PLACE_ID_0001": {
+    "name": "Musterfirma GmbH",
+    "formatted_address": "Musterstraße 1, 10115 Berlin, Deutschland",
+    "formatted_phone_number": "030 0000001",
+    "website": "https://www.musterfirma.example",
+    "rating": 4.5,
+    "user_ratings_total": 42,
+    "city": "Berlin",
+    "date_added": "2026-01-15"
+  },
+  "EXAMPLE_PLACE_ID_0002": {
+    "name": "Beispiel Elektro e.K.",
+    "formatted_address": "Beispielweg 12, 10117 Berlin, Deutschland",
+    "formatted_phone_number": "Keine Nummer",
+    "website": "KEINE WEBSITE",
+    "rating": 3.8,
+    "user_ratings_total": 7,
+    "city": "Berlin",
+    "date_added": "2026-01-15"
+  },
+  "EXAMPLE_PLACE_ID_0003": {
+    "name": "Mustermann Haustechnik",
+    "formatted_address": "Musterallee 5, 13581 Berlin, Deutschland",
+    "formatted_phone_number": "030 0000003",
+    "website": "https://mustermann-haustechnik.example",
+    "rating": "",
+    "user_ratings_total": 0,
+    "city": "Berlin",
+    "date_added": "2026-01-16"
+  }
+}

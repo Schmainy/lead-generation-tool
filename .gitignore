@@ -1,0 +1,13 @@
+.env
+API.Key.txt
+Known_businesses.json
+Search_history.json
+Search_areas.json
+leads/*
+!leads/sample_data/
+output/
+__pycache__/
+*.pyc
+*.log
+venv/
+.venv/

@@ -1,0 +1,163 @@
+================================================================
+    GOOGLE MAPS LEAD GENERATOR – ANLEITUNG
+================================================================
+
+Dieses Tool durchsucht Google Maps nach Unternehmen in einer
+bestimmten Stadt und exportiert die Ergebnisse als PDF und Excel.
+
+----------------------------------------------------------------
+SCHRITT 1 – Python installieren
+----------------------------------------------------------------
+
+1. Gehe zu: https://www.python.org/downloads
+2. Lade die neueste Version herunter und installiere sie
+3. WICHTIG: Beim Installieren den Haken setzen bei:
+   "Add Python to PATH"  ← sonst funktioniert nichts!
+
+----------------------------------------------------------------
+SCHRITT 2 – Pakete installieren
+----------------------------------------------------------------
+
+Öffne die Eingabeaufforderung (CMD) und führe folgenden
+Befehl aus:
+
+    pip install -r requirements.txt
+
+Das muss nur EINMAL gemacht werden.
+
+----------------------------------------------------------------
+SCHRITT 3 – Google Maps API Key erstellen
+----------------------------------------------------------------
+
+1. Gehe zu: https://console.cloud.google.com
+   (Google-Konto erforderlich – kostenlos)
+
+2. Klicke oben auf „Projekt auswählen" → „Neues Projekt"
+   Vergib einen beliebigen Namen (z.B. „LeadGenerator")
+   → Klicke auf „Erstellen"
+
+3. Gehe im linken Menü zu:
+   „APIs & Dienste" → „Bibliothek"
+
+4. Aktiviere folgende APIs (jeweils suchen & „Aktivieren" klicken):
+   - Places API            ← PFLICHT (Unternehmenssuche)
+   - Geocoding API         ← PFLICHT (PLZ-Erkennung & Stadtsuche)
+
+5. Gehe zu:
+   „APIs & Dienste" → „Anmeldedaten"
+   → Klicke auf „+ Anmeldedaten erstellen" → „API-Schlüssel"
+   → Den angezeigten Key kopieren und sicher speichern!
+
+6. WICHTIG – Abrechnung aktivieren:
+   Gehe zu „Abrechnung" und hinterlege eine Zahlungsmethode.
+   Ohne hinterlegte Karte funktioniert die API leider nicht.
+
+----------------------------------------------------------------
+SCHRITT 4 – API Key in der .env hinterlegen
+----------------------------------------------------------------
+
+Kopiere die Datei ".env.example" im Tool-Ordner und nenne die
+Kopie ".env". Sie sieht so aus:
+
+    GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+
+Ersetze your_google_maps_api_key_here mit deinem kopierten API Key.
+Speichern – fertig. Das Tool liest den Key automatisch ein.
+(Alternativ die Umgebungsvariable GOOGLE_MAPS_API_KEY setzen.)
+Die .env-Datei niemals weitergeben oder hochladen!
+
+----------------------------------------------------------------
+SCHRITT 5 – Tool starten
+----------------------------------------------------------------
+
+Option A (empfohlen):
+   Doppelklick auf "start.bat"
+   → Das Programm startet automatisch im Terminal
+
+Option B (manuell im Terminal):
+   Im Ordner des Tools öffne CMD und tippe:
+       python leads_generator.py
+
+----------------------------------------------------------------
+SCHRITT 6 – Das Tool bedienen
+----------------------------------------------------------------
+
+Das Programm fragt dich Schritt für Schritt:
+
+  1. Kategorie wählen (z.B. Handwerk, Medizin, Gastronomie)
+  2. Unternehmenstyp wählen (z.B. Trockenbauer, Zahnarzt)
+     → Eigenen Begriff eingeben ist ebenfalls möglich
+     → Bei unbekanntem Begriff fragt das Tool ob trotzdem
+       gesucht werden soll
+  3. Stadt eingeben (z.B. Potsdam, Berlin, München)
+  4. Suchradius in km (z.B. 10)
+     → Das Tool findet automatisch alle Postleitzahlen
+       im gewählten Umkreis und sucht jede einzeln durch
+  5. Filter setzen (optional):
+     - Nur Firmen ohne Website ODER nur mit Website
+     - Mindest- oder Maximalbewertung (z.B. nur unter 3 Sterne)
+     - Mindestanzahl Bewertungen
+     - Bestimmte Keywords aus Namen ausschließen
+  6. Weiteren Unternehmenstyp hinzufügen? (j/n)
+  7. Export-Format wählen: Excel oder CSV
+
+Danach läuft die Suche automatisch durch alle Postleitzahlen.
+
+HINWEIS: Bei weniger als 7 Ergebnissen fragt das Tool ob es
+automatisch auf verwandte Berufsgruppen erweitern soll
+(z.B. bei Trockenbauer → Stuckateur, Maurer).
+Maximal 2 Erweiterungen, dann Stopp.
+
+----------------------------------------------------------------
+SCHRITT 7 – Ergebnis öffnen
+----------------------------------------------------------------
+
+Die Ergebnisse werden automatisch gespeichert unter:
+
+    leads \ Land \ Bundesland \ Stadt \
+
+Beispiel:
+    leads\Germany\Brandenburg\Potsdam\Trockenbauer_Potsdam.pdf
+    leads\Germany\Brandenburg\Potsdam\Trockenbauer_Potsdam.xlsx
+
+Die PDF enthält eine einzelne Tabelle, sortiert nach
+Postleitzahl mit folgenden Spalten:
+
+  Name       – Firmenname
+  Adresse    – Vollständige Adresse
+  Telefon    – Telefonnummer (falls vorhanden)
+  Website    – URL oder "KEINE WEBSITE"
+  Bewertung  – Google-Sterne (1–5)
+
+TIPP: Firmen mit "KEINE WEBSITE" sind die besten Leads für
+      Web- und Marketing-Agenturen!
+
+----------------------------------------------------------------
+HÄUFIGE FEHLER & LÖSUNGEN
+----------------------------------------------------------------
+
+  REQUEST_DENIED
+  → API-Key falsch oder Places/Geocoding API nicht aktiviert
+  → Lösung: Key in der .env prüfen, APIs in der Cloud
+    Console aktivieren
+
+  OVER_QUERY_LIMIT
+  → Zu viele Anfragen in kurzer Zeit
+  → Lösung: Kurz warten und erneut starten
+
+  Keine Ergebnisse
+  → Suchbegriff nicht in Google Maps Kategorien eingetragen
+  → Lösung: Anderen Begriff aus der Datenbank versuchen oder
+    verwandte Berufsgruppen bei Nachfrage bestätigen
+
+  ModuleNotFoundError
+  → Pakete fehlen noch
+  → Lösung: Befehl aus Schritt 2 erneut ausführen
+
+  pgeocode findet keine PLZ
+  → Radius zu klein oder Stadt unbekannt
+  → Lösung: Radius erhöhen (z.B. auf 15 km)
+
+================================================================
+    Viel Erfolg mit deinen Leads!
+================================================================
